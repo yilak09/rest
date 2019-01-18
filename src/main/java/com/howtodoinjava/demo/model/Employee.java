@@ -1,5 +1,9 @@
 package com.howtodoinjava.demo.model;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 
 	public Employee() {
