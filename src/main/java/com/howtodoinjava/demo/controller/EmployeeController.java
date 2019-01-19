@@ -22,11 +22,13 @@ public class EmployeeController {
 	private EmpService empService;
 	
 	@RequestMapping("/")
-    public List<Employee> getEmployees() 
-    {
-		List<Employee> employeesList = new ArrayList<Employee>();
-		employeesList.add(new Employee(1,"lokesh","gupta","howtodoinjava@gmail.com"));
-		return employeesList;
+    public List<Employee> getEmployees() {
+		Employee emp = new Employee();
+		emp.setFirstName("yilak");
+		emp.setEmail("example@gmail.com");
+		emp.setLastName("Ayele");
+		emp.setId(1);
+		return empService.addEmp(emp);
     }
 
 	@GetMapping("/hello")
